@@ -393,16 +393,16 @@
     .timeline { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
     .tl-item {
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 1.5rem;
+      grid-template-columns: 72px 16px 1fr;
+      gap: 0 12px;
       padding-bottom: 2rem;
       position: relative;
     }
     .tl-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 39px; top: 24px; bottom: 0;
-      width: 0.5px;
+      left: 79px; top: 20px; bottom: 0;
+      width: 1px;
       background: var(--border);
     }
     .tl-year {
@@ -411,13 +411,14 @@
       font-weight: 500;
       padding-top: 2px;
       text-align: right;
+      line-height: 1.3;
     }
     .tl-dot {
-      position: absolute;
-      left: 36px; top: 6px;
-      width: 8px; height: 8px;
+      width: 10px; height: 10px;
       border-radius: 50%;
       background: var(--green);
+      margin-top: 4px;
+      flex-shrink: 0;
     }
     .tl-content h3 { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
     .tl-content p { font-size: 13px; color: var(--ink-3); }
@@ -536,7 +537,7 @@
           no centro delas
         </h1>
         <p class="hero-sub">
-          Mais de oito anos construindo pontes entre gestão de projetos sociais, monitoramento e avaliação, e equidade de gênero e raça — no setor público, no terceiro setor e na pesquisa aplicada.
+          Mais de oito anos construindo pontes entre gestão de projetos sociais, monitoramento e avaliação, e equidade de gênero e raça, no setor público, no terceiro setor e na pesquisa aplicada.
         </p>
         <div class="hero-actions">
           <a class="btn-primary" href="#projetos">Ver projetos</a>
@@ -567,16 +568,16 @@
         <p class="section-label">Sobre mim</p>
         <h2 class="section-title">Uma trajetória construída camada por camada</h2>
         <p>
-          Nasci em São Joaquim da Barra, cresci entre movimentos de comunicação jovem e gestão pública, e foi na Universidade de São Paulo que encontrei as ferramentas para unir o que sempre me movia: compreender como as políticas chegam — ou não chegam — nas pessoas.
+          Nasci em São Joaquim da Barra, cresci entre movimentos de comunicação jovem e gestão pública, e foi na Universidade de São Paulo que encontrei as ferramentas para unir o que sempre me movia: compreender como as políticas chegam, ou não chegam, nas pessoas.
         </p>
         <p>
           Ao longo de mais de oito anos, transitei entre o setor público, o terceiro setor e a pesquisa aplicada. Cada contexto deixou uma camada: da coordenação de programas de formação em tecnologia para mulheres em situação de vulnerabilidade à avaliação de programas governamentais, da articulação com financiadores nacionais e internacionais à pesquisa sobre instrumentos de políticas públicas.
         </p>
         <p>
-          Hoje, como mestranda na EACH-USP e pesquisadora no PolicytLab vinculado à UNESCO, me dedico a entender como as cidades respondem à crise climática — com especial atenção a quem está no centro dessas decisões e quem ainda não está.
+          Hoje, como mestranda na EACH-USP e pesquisadora no PolicytLab vinculado à UNESCO, me dedico a entender como as cidades respondem à crise climática, com especial atenção a quem está no centro dessas decisões e quem ainda não está.
         </p>
         <p>
-          Aprendo com cada frente. É essa porosidade ao contexto que orienta como atuo — com comprometimento, cuidado e perspectiva de gênero e raça integrada ao ciclo inteiro do trabalho.
+          Aprendo com cada frente. É essa porosidade ao contexto que orienta como atuo, com comprometimento, cuidado e perspectiva de gênero e raça integrada ao ciclo inteiro do trabalho.
         </p>
         <div style="margin-top: 2rem;">
           <a class="btn-ghost" href="https://linkedin.com/in/cardosoletícia" target="_blank">LinkedIn →</a>
@@ -619,7 +620,7 @@
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
         </div>
         <h3>Equidade de Gênero e Raça</h3>
-        <p>Perspectiva de gênero, raça e interseccionalidade integrada ao ciclo programático — da concepção à avaliação de resultados.</p>
+        <p>Perspectiva de gênero, raça e interseccionalidade integrada ao ciclo programático, da concepção à avaliação de resultados.</p>
       </div>
 
       <div class="comp-card">
@@ -635,7 +636,7 @@
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <h3>Articulação e Parcerias</h3>
-        <p>Engajamento com setor privado, RSC, financiadores institucionais, secretarias e redes legislativas — captação e gestão de parcerias programáticas.</p>
+        <p>Engajamento com setor privado, RSC, financiadores institucionais, secretarias e redes legislativas, captação e gestão de parcerias programáticas.</p>
       </div>
 
     </div>
@@ -647,7 +648,7 @@
   <div class="wrap">
     <p class="section-label">Experiências</p>
     <h2 class="section-title">Projetos e atuações</h2>
-    <p class="section-lead">Cada projeto carrega um contexto diferente — e é exatamente essa diversidade que forma meu olhar sobre gestão, avaliação e impacto.</p>
+    <p class="section-lead">Cada projeto carrega um contexto diferente, e é exatamente essa diversidade que forma meu olhar sobre gestão, avaliação e impacto.</p>
 
     <div class="proj-tabs">
       <button class="proj-tab active" onclick="showBlock('tecnologia', this)">Tecnologia e inclusão</button>
@@ -675,7 +676,7 @@
           <div class="proj-img-placeholder">foto: Simpósio UNESCO Pequim 2025</div>
           <div class="proj-body">
             <span class="proj-tag">UNESCO · EducaSTEM2030</span>
-            <h3>Programação Desplugada — Belém, Breves e Brasília</h3>
+            <h3>Programação Desplugada: Belém, Breves e Brasília</h3>
             <p>Desenvolvimento e facilitação de workshop de Programação Desplugada para professores e alunas do ensino público. Apresentação do trabalho institucional no International Symposium on Girls' and Women's Education, em Pequim (2025).</p>
             <p class="proj-meta">Parceria UNESCO · Ensino público · Equidade de gênero na educação</p>
           </div>
@@ -713,7 +714,7 @@
           <div class="proj-img-placeholder">foto: Fundação Lemann / entrevistas</div>
           <div class="proj-body">
             <span class="proj-tag">Fundação Lemann · 2021–2022</span>
-            <h3>Pesquisa qualitativa — Movimento Pessoas à Frente</h3>
+            <h3>Pesquisa qualitativa: Movimento Pessoas à Frente</h3>
             <p>Entrevistas semiestruturadas com lideranças estratégicas para subsidiar a visão de futuro do movimento em 2022, com foco na melhoria da gestão de pessoas no setor público.</p>
             <p class="proj-meta">Pesquisa qualitativa · Análise estratégica · Gestão pública</p>
           </div>
@@ -773,7 +774,7 @@
         <div>
           <p class="pub-year">2023 · Capítulo de livro</p>
           <p class="pub-title">Philanthropy During COVID-19 Emergency: Towards a Postcolonial Perspective?</p>
-          <p class="pub-authors">Mendonça, P. M. E.; Aoqui, C.; Cardoso, L. — In: EADI Global Development Series. Springer International Publishing.</p>
+          <p class="pub-authors">Mendonça, P. M. E.; Aoqui, C.; Cardoso, L. In: EADI Global Development Series, Springer International Publishing.</p>
         </div>
         <a class="pub-link" href="https://link.springer.com/10.1007/978-3-031-23305-0_4" target="_blank">Ver →</a>
       </div>
@@ -782,7 +783,7 @@
         <div>
           <p class="pub-year">2021 · Artigo</p>
           <p class="pub-title">Giro decolonial na filantropia: entre o paradoxo e a urgência</p>
-          <p class="pub-authors">Aoqui, C.; Gonçalves, J.; Cardoso, L. — Rede Comuá / Rede de Filantropia para Justiça Social.</p>
+          <p class="pub-authors">Aoqui, C.; Gonçalves, J.; Cardoso, L. Rede Comuá / Rede de Filantropia para Justiça Social.</p>
         </div>
         <a class="pub-link" href="https://redecomua.org.br/giro-decolonial-na-filantropia-entre-o-paradoxo-e-a-urgencia/" target="_blank">Ver →</a>
       </div>
@@ -791,7 +792,7 @@
         <div>
           <p class="pub-year">2025 · Simpósio internacional</p>
           <p class="pub-title">Apresentação no International Symposium on Girls' and Women's Education</p>
-          <p class="pub-authors">UNESCO — Beijing, China, setembro de 2025.</p>
+          <p class="pub-authors">UNESCO: Beijing, China, setembro de 2025.</p>
         </div>
         <span class="pub-link" style="color: var(--ink-3); cursor: default;">Evento presencial</span>
       </div>
@@ -800,7 +801,7 @@
         <div>
           <p class="pub-year">2018 · Relatório de pesquisa</p>
           <p class="pub-title">Politização da burocracia no Brasil: análise da trajetória dos membros de carreira meritocrática</p>
-          <p class="pub-authors">Cardoso, L. — Programa Unificado de Bolsas USP. Orientação: Profa. Dra. Cecília Olivieri.</p>
+          <p class="pub-authors">Cardoso, L. Programa Unificado de Bolsas USP. Orientação: Profa. Dra. Cecília Olivieri.</p>
         </div>
         <span class="pub-link" style="color: var(--ink-3); cursor: default;">Relatório interno</span>
       </div>
@@ -819,25 +820,25 @@
       <div class="dep-card">
         <p class="dep-quote">"Tem uma perspicácia excepcional na área dela, além de ter um entendimento sobre projetos e políticas públicas que contribuía muito para a dinâmica da Reprograma."</p>
         <p class="dep-author">Raquel Catelan</p>
-        <p class="dep-role">Product Designer Jr / UX-UI Designer — colega na Reprograma</p>
+        <p class="dep-role">Product Designer Jr, UX-UI Designer: colega na Reprograma</p>
       </div>
 
       <div class="dep-card">
         <p class="dep-quote">"Seu comprometimento e dedicação são consistentes e contagiantes, tendo bastante conhecimento técnico para coordenação e gestão de projetos. De fato, a considero um excelente exemplo de liderança de impacto e inclusiva."</p>
         <p class="dep-author">Amanda Souza</p>
-        <p class="dep-role">Desenvolvimento Sustentável e Políticas Públicas — gestora direta</p>
+        <p class="dep-role">Desenvolvimento Sustentável e Políticas Públicas: gestora direta</p>
       </div>
 
       <div class="dep-card">
         <p class="dep-quote">"Ela sempre trazia soluções inovadoras para os desafios do dia a dia e sempre se mostrou super disposta a colaborar e somar junto, sem medo de tomar a iniciativa quando necessário."</p>
         <p class="dep-author">Mariana Pereira</p>
-        <p class="dep-role">Filantropia e Investimento Social — gestora direta na Reprograma</p>
+        <p class="dep-role">Filantropia e Investimento Social: gestora direta na Reprograma</p>
       </div>
 
       <div class="dep-card">
         <p class="dep-quote">"Rapidamente se tornou uma pessoa chave dentro da organização ao apoiar a implementação da gestão de programas e na construção da Teoria da Mudança, crucial para a estratégia organizacional."</p>
         <p class="dep-author">Silvia Rodrigues Follador</p>
-        <p class="dep-role">PhD Candidate FGV EAESP & Research Scholar MIT — gestora direta</p>
+        <p class="dep-role">PhD Candidate FGV EAESP & Research Scholar MIT: gestora direta</p>
       </div>
 
     </div>
@@ -856,7 +857,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h3>Mestrado em Gestão de Políticas Públicas</h3>
-          <p>Universidade de São Paulo — EACH-USP · Dissertação: A configuração do mix de instrumentos da mobilidade urbana no PlanClima SP</p>
+          <p>Universidade de São Paulo, EACH-USP · Dissertação: A configuração do mix de instrumentos da mobilidade urbana no PlanClima SP</p>
         </div>
       </div>
 
@@ -873,8 +874,8 @@
         <div class="tl-year">2024</div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h3>Laboratório de Pesquisa — 40h</h3>
-          <p>Centro Brasileiro de Análise e Planejamento — CEBRAP</p>
+          <h3>Laboratório de Pesquisa: 40h</h3>
+          <p>Centro Brasileiro de Análise e Planejamento: CEBRAP</p>
         </div>
       </div>
 
@@ -901,7 +902,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h3>Bacharelado em Gestão de Políticas Públicas</h3>
-          <p>Universidade de São Paulo — EACH-USP</p>
+          <p>Universidade de São Paulo, EACH-USP</p>
         </div>
       </div>
 
