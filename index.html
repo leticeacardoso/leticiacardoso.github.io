@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letícia Cardoso — Gestão de Programas e Políticas Públicas</title>
+  <meta name="description" content="Portfólio de Letícia Cardoso — pesquisadora, gestora de programas sociais e especialista em monitoramento, avaliação e equidade de gênero e raça." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & tokens ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:   #0F6E56;
+      --green-l: #E1F5EE;
+      --green-m: #1D9E75;
+      --ink:     #1C1C1A;
+      --ink-2:   #4A4A46;
+      --ink-3:   #8A8A84;
+      --surface: #F7F6F2;
+      --white:   #FFFFFF;
+      --border:  rgba(28,28,26,.1);
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+      --radius: 12px;
+      --max: 860px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--white);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -.01em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--ink-2);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta {
+      font-size: 13px;
+      background: var(--green);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .nav-cta:hover { opacity: .88; }
+
+    /* ── Wrapper ── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    /* ── Hero ── */
+    #hero {
+      padding: 120px 0 80px;
+      background: var(--surface);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .hero-title em { color: var(--green); font-style: italic; }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--ink-2);
+      max-width: 480px;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn-primary:hover { opacity: .88; }
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid var(--border);
+      color: var(--ink-2);
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color .15s, color .15s;
+      background: var(--white);
+    }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+    .hero-photo {
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      display: block;
+      background: var(--green-l);
+    }
+    .hero-photo-placeholder {
+      width: 100%;
+      border-radius: var(--radius);
+      aspect-ratio: 3/4;
+      background: var(--green-l);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 13px;
+      gap: 8px;
+      border: 1.5px dashed var(--green-m);
+    }
+    .hero-photo-placeholder svg { opacity: .5; }
+    .hero-badge {
+      position: absolute;
+      bottom: -16px; left: -16px;
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: var(--ink-2);
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .hero-badge strong { display: block; font-size: 15px; color: var(--ink); font-weight: 500; }
+
+    /* ── Section base ── */
+    section { padding: 80px 0; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .section-lead {
+      font-size: 16px;
+      color: var(--ink-2);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Sobre ── */
+    #sobre { background: var(--white); }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .sobre-text p { color: var(--ink-2); margin-bottom: 1.25rem; }
+    .sobre-photo img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      background: var(--green-l);
+    }
+    .sobre-photo-placeholder {
+      width: 100%;
+      border-radius: var(--radius);
+      aspect-ratio: 4/5;
+      background: var(--green-l);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 13px;
+      border: 1.5px dashed var(--green-m);
+    }
+
+    /* ── Competências ── */
+    #competencias { background: var(--surface); }
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .comp-card {
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .comp-icon {
+      width: 40px; height: 40px;
+      background: var(--green-l);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--green);
+    }
+    .comp-card h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: .4rem;
+      color: var(--ink);
+    }
+    .comp-card p {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+
+    /* ── Projetos ── */
+    #projetos { background: var(--white); }
+    .proj-tabs {
+      display: flex; gap: .5rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .proj-tab {
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 0.5px solid var(--border);
+      background: var(--white);
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .proj-tab.active, .proj-tab:hover {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+    }
+    .proj-block { display: none; }
+    .proj-block.visible { display: block; }
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .proj-card {
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+    }
+    .proj-img {
+      width: 100%; height: 200px;
+      object-fit: cover;
+      background: var(--green-l);
+      display: block;
+    }
+    .proj-img-placeholder {
+      width: 100%; height: 200px;
+      background: var(--green-l);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 12px;
+    }
+    .proj-body { padding: 1.25rem; }
+    .proj-tag {
+      display: inline-block;
+      font-size: 11px;
+      background: var(--green-l);
+      color: var(--green);
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: .75rem;
+      font-weight: 500;
+    }
+    .proj-body h3 { font-size: 16px; font-weight: 500; margin-bottom: .5rem; }
+    .proj-body p { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+    .proj-meta {
+      font-size: 12px;
+      color: var(--ink-3);
+      margin-top: .75rem;
+      padding-top: .75rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    /* ── Publicações ── */
+    #publicacoes { background: var(--surface); }
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .pub-item {
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+    .pub-year {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: .25rem;
+    }
+    .pub-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: .25rem; }
+    .pub-authors { font-size: 12px; color: var(--ink-3); }
+    .pub-link {
+      font-size: 12px;
+      color: var(--green);
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .pub-link:hover { text-decoration: underline; }
+
+    /* ── Depoimentos ── */
+    #depoimentos { background: var(--white); }
+    .dep-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .dep-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 0.5px solid var(--border);
+    }
+    .dep-quote {
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .dep-author { font-size: 13px; font-weight: 500; color: var(--ink); }
+    .dep-role { font-size: 12px; color: var(--ink-3); }
+
+    /* ── Formação ── */
+    #formacao { background: var(--surface); }
+    .timeline { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 39px; top: 24px; bottom: 0;
+      width: 0.5px;
+      background: var(--border);
+    }
+    .tl-year {
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 500;
+      padding-top: 2px;
+      text-align: right;
+    }
+    .tl-dot {
+      position: absolute;
+      left: 36px; top: 6px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+    .tl-content h3 { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
+    .tl-content p { font-size: 13px; color: var(--ink-3); }
+
+    /* ── Contato ── */
+    #contato {
+      background: var(--ink);
+      color: var(--white);
+      padding: 80px 0;
+    }
+    #contato .section-label { color: var(--green-m); }
+    #contato .section-title { color: var(--white); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contato-text { color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.7; }
+    .contato-links { display: flex; flex-direction: column; gap: .75rem; margin-top: 2rem; }
+    .contato-link {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .15s;
+    }
+    .contato-link:hover { color: var(--white); }
+    .contato-icon {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contato-form { display: flex; flex-direction: column; gap: .75rem; }
+    .contato-form input,
+    .contato-form textarea {
+      background: rgba(255,255,255,.07);
+      border: 0.5px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 14px;
+      outline: none;
+      transition: border-color .15s;
+      resize: vertical;
+    }
+    .contato-form input::placeholder,
+    .contato-form textarea::placeholder { color: rgba(255,255,255,.35); }
+    .contato-form input:focus,
+    .contato-form textarea:focus { border-color: var(--green-m); }
+    .contato-form button {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity .15s;
+      font-family: var(--sans);
+      align-self: flex-start;
+    }
+    .contato-form button:hover { opacity: .88; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      border-top: 0.5px solid rgba(255,255,255,.08);
+      padding: 24px 0;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .hero-grid, .sobre-grid, .contato-grid, .dep-grid, .proj-grid { grid-template-columns: 1fr; }
+      .hero-photo { order: -1; }
+      .hero-badge { display: none; }
+      .nav-links { display: none; }
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">Letícia Cardoso</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#publicacoes">Publicações</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+    </ul>
+    <a class="nav-cta" href="#contato">Vamos conversar</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">Pesquisadora · Gestora de Programas · Equidade de Gênero e Raça</p>
+        <h1 class="hero-title">
+          Políticas que partem<br>
+          de <em>quem está</em><br>
+          no centro delas
+        </h1>
+        <p class="hero-sub">
+          Mais de oito anos construindo pontes entre gestão de projetos sociais, monitoramento e avaliação, e equidade de gênero e raça — no setor público, no terceiro setor e na pesquisa aplicada.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projetos">Ver projetos</a>
+          <a class="btn-ghost" href="cv_leticia_cardoso.pdf" target="_blank">Baixar CV</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- INSTRUÇÃO: substitua o conteúdo abaixo pela tag <img> quando tiver a foto -->
+        <!-- <img src="fotos/foto-hero.jpg" alt="Letícia Cardoso" /> -->
+        <div class="hero-photo-placeholder">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          foto-hero.jpg
+        </div>
+        <div class="hero-badge">
+          <strong>Mestranda USP</strong>
+          Gestão de Políticas Públicas · 2025
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOBRE ── -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <p class="section-label">Sobre mim</p>
+        <h2 class="section-title">Uma trajetória construída camada por camada</h2>
+        <p>
+          Nasci em São Joaquim da Barra, cresci entre movimentos de comunicação jovem e gestão pública, e foi na Universidade de São Paulo que encontrei as ferramentas para unir o que sempre me movia: compreender como as políticas chegam — ou não chegam — nas pessoas.
+        </p>
+        <p>
+          Ao longo de mais de oito anos, transitei entre o setor público, o terceiro setor e a pesquisa aplicada. Cada contexto deixou uma camada: da coordenação de programas de formação em tecnologia para mulheres em situação de vulnerabilidade à avaliação de programas governamentais, da articulação com financiadores nacionais e internacionais à pesquisa sobre instrumentos de políticas públicas.
+        </p>
+        <p>
+          Hoje, como mestranda na EACH-USP e pesquisadora no PolicytLab vinculado à UNESCO, me dedico a entender como as cidades respondem à crise climática — com especial atenção a quem está no centro dessas decisões e quem ainda não está.
+        </p>
+        <p>
+          Aprendo com cada frente. É essa porosidade ao contexto que orienta como atuo — com comprometimento, cuidado e perspectiva de gênero e raça integrada ao ciclo inteiro do trabalho.
+        </p>
+        <div style="margin-top: 2rem;">
+          <a class="btn-ghost" href="https://linkedin.com/in/cardosoletícia" target="_blank">LinkedIn →</a>
+        </div>
+      </div>
+      <div class="sobre-photo">
+        <!-- INSTRUÇÃO: substitua pela tag <img> quando tiver a foto -->
+        <!-- <img src="fotos/foto-sobre.jpg" alt="Letícia Cardoso em evento" /> -->
+        <div class="sobre-photo-placeholder">foto-sobre.jpg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPETÊNCIAS ── -->
+<section id="competencias">
+  <div class="wrap">
+    <p class="section-label">O que faço</p>
+    <h2 class="section-title">Competências centrais</h2>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
+        </div>
+        <h3>Gestão de Programas Sociais</h3>
+        <p>Ciclo completo: planejamento, implementação, monitoramento, avaliação e prestação de contas com múltiplos financiadores nacionais e internacionais.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-5"/></svg>
+        </div>
+        <h3>Monitoramento e Avaliação (MEAL)</h3>
+        <p>Desenvolvimento de indicadores, pesquisa qualitativa e quantitativa, relatórios narrativos e analíticos orientados à tomada de decisão.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Equidade de Gênero e Raça</h3>
+        <p>Perspectiva de gênero, raça e interseccionalidade integrada ao ciclo programático — da concepção à avaliação de resultados.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Políticas Públicas e Pesquisa</h3>
+        <p>Análise de desenho institucional, arranjos de governança, Teoria da Mudança, Marco Lógico e produção de diagnósticos para financiadores públicos.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Articulação e Parcerias</h3>
+        <p>Engajamento com setor privado, RSC, financiadores institucionais, secretarias e redes legislativas — captação e gestão de parcerias programáticas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJETOS ── -->
+<section id="projetos">
+  <div class="wrap">
+    <p class="section-label">Experiências</p>
+    <h2 class="section-title">Projetos e atuações</h2>
+    <p class="section-lead">Cada projeto carrega um contexto diferente — e é exatamente essa diversidade que forma meu olhar sobre gestão, avaliação e impacto.</p>
+
+    <div class="proj-tabs">
+      <button class="proj-tab active" onclick="showBlock('tecnologia', this)">Tecnologia e inclusão</button>
+      <button class="proj-tab" onclick="showBlock('avaliacao', this)">Avaliação e pesquisa</button>
+      <button class="proj-tab" onclick="showBlock('publico', this)">Setor público</button>
+    </div>
+
+    <!-- Bloco: Tecnologia -->
+    <div id="block-tecnologia" class="proj-block visible">
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <!-- <img class="proj-img" src="fotos/reprograma-oficina.jpg" alt="Oficina UNESCO EducaSTEM"> -->
+          <div class="proj-img-placeholder">foto: Oficina UNESCO / Pará</div>
+          <div class="proj-body">
+            <span class="proj-tag">Reprograma · 2022–atual</span>
+            <h3>Coordenação de programas de inclusão produtiva em tecnologia</h3>
+            <p>Gestão do ciclo completo de programas de formação para mulheres, negras, trans e travestis em 11 municípios de SP. Prestação de contas a financiadores nacionais e internacionais, controle de prazos e qualidade.</p>
+            <p class="proj-meta">PMD Pro · SCRUM · Teoria da Mudança · Relatórios de impacto</p>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <!-- <img class="proj-img" src="fotos/unesco-beijing.jpg" alt="Simpósio UNESCO Pequim"> -->
+          <div class="proj-img-placeholder">foto: Simpósio UNESCO Pequim 2025</div>
+          <div class="proj-body">
+            <span class="proj-tag">UNESCO · EducaSTEM2030</span>
+            <h3>Programação Desplugada — Belém, Breves e Brasília</h3>
+            <p>Desenvolvimento e facilitação de workshop de Programação Desplugada para professores e alunas do ensino público. Apresentação do trabalho institucional no International Symposium on Girls' and Women's Education, em Pequim (2025).</p>
+            <p class="proj-meta">Parceria UNESCO · Ensino público · Equidade de gênero na educação</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bloco: Avaliação -->
+    <div id="block-avaliacao" class="proj-block">
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <!-- <img class="proj-img" src="fotos/policylab-finep.jpg" alt="PolicytLab FINEP"> -->
+          <div class="proj-img-placeholder">foto: PolicytLab / FINEP</div>
+          <div class="proj-body">
+            <span class="proj-tag">PolicytLab · UNESCO · 2025–2026</span>
+            <h3>Avaliação do Programa Mulheres Inovadoras (FINEP/MCTI)</h3>
+            <p>Análise de desenho institucional, arranjos de governança e resultados do programa federal. Desenvolvimento de instrumentos de avaliação, pesquisa qualitativa e quantitativa, e entrega de relatório técnico para financiador público federal.</p>
+            <p class="proj-meta">Pesquisa qualitativa · Mapeamento de stakeholders · Relatório técnico</p>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img-placeholder">foto: ponteAponte / Teoria da Mudança</div>
+          <div class="proj-body">
+            <span class="proj-tag">ponteAponte · 2019–2022</span>
+            <h3>Co-facilitação de Teorias da Mudança com ISP</h3>
+            <p>Co-facilitação de 12 oficinas de Teoria da Mudança com iniciativas do investimento social privado. Elaboração de planos de monitoramento, relatórios técnicos e feedbacks analíticos em processos seletivos nacionais.</p>
+            <p class="proj-meta">Fundação MCSV · Santander · Instituto Votorantim · Instituto Mattos Filho</p>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img-placeholder">foto: Fundação Lemann / entrevistas</div>
+          <div class="proj-body">
+            <span class="proj-tag">Fundação Lemann · 2021–2022</span>
+            <h3>Pesquisa qualitativa — Movimento Pessoas à Frente</h3>
+            <p>Entrevistas semiestruturadas com lideranças estratégicas para subsidiar a visão de futuro do movimento em 2022, com foco na melhoria da gestão de pessoas no setor público.</p>
+            <p class="proj-meta">Pesquisa qualitativa · Análise estratégica · Gestão pública</p>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img-placeholder">foto: Dendezê / grupo focal</div>
+          <div class="proj-body">
+            <span class="proj-tag">Dendezê / Instituto ismart · 2024</span>
+            <h3>Avaliação do Instituto ismart</h3>
+            <p>Mediação de grupos focais, sistematização de dados qualitativos e redação de relatório técnico de avaliação.</p>
+            <p class="proj-meta">Grupos focais · Sistematização · Relatório analítico</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bloco: Público -->
+    <div id="block-publico" class="proj-block">
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-img-placeholder">foto: Governo Aberto SP</div>
+          <div class="proj-body">
+            <span class="proj-tag">Prefeitura de SP · 2016–2018</span>
+            <h3>Governo Aberto e monitoramento estratégico</h3>
+            <p>Como Agente de Governo Aberto, formei 427 pessoas nos princípios de transparência, participação social e accountability em áreas periféricas. No Gabinete do Prefeito, apoiei o monitoramento de projetos estratégicos do Executivo municipal com metodologia ZOPP.</p>
+            <p class="proj-meta">427 pessoas formadas · Metodologia ZOPP · Dados para alta gestão</p>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img-placeholder">foto: Agenda Pública / oficina</div>
+          <div class="proj-body">
+            <span class="proj-tag">Agenda Pública · 2018–2019</span>
+            <h3>Formação de servidores públicos em inovação</h3>
+            <p>Desenvolvimento de metodologias para oficinas de formação de servidores em inovação, governo aberto e qualidade dos serviços públicos. Colaboração na elaboração do manual de gestão de projetos para o Laboratório de Planejamento do Município Transparente.</p>
+            <p class="proj-meta">Diagnósticos socioeconômicos · Manual de gestão · Aprendizagem ativa</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PUBLICAÇÕES ── -->
+<section id="publicacoes">
+  <div class="wrap">
+    <p class="section-label">Produção</p>
+    <h2 class="section-title">Publicações e produções</h2>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div>
+          <p class="pub-year">2023 · Capítulo de livro</p>
+          <p class="pub-title">Philanthropy During COVID-19 Emergency: Towards a Postcolonial Perspective?</p>
+          <p class="pub-authors">Mendonça, P. M. E.; Aoqui, C.; Cardoso, L. — In: EADI Global Development Series. Springer International Publishing.</p>
+        </div>
+        <a class="pub-link" href="https://link.springer.com/10.1007/978-3-031-23305-0_4" target="_blank">Ver →</a>
+      </div>
+
+      <div class="pub-item">
+        <div>
+          <p class="pub-year">2021 · Artigo</p>
+          <p class="pub-title">Giro decolonial na filantropia: entre o paradoxo e a urgência</p>
+          <p class="pub-authors">Aoqui, C.; Gonçalves, J.; Cardoso, L. — Rede Comuá / Rede de Filantropia para Justiça Social.</p>
+        </div>
+        <a class="pub-link" href="https://redecomua.org.br/giro-decolonial-na-filantropia-entre-o-paradoxo-e-a-urgencia/" target="_blank">Ver →</a>
+      </div>
+
+      <div class="pub-item">
+        <div>
+          <p class="pub-year">2025 · Simpósio internacional</p>
+          <p class="pub-title">Apresentação no International Symposium on Girls' and Women's Education</p>
+          <p class="pub-authors">UNESCO — Beijing, China, setembro de 2025.</p>
+        </div>
+        <span class="pub-link" style="color: var(--ink-3); cursor: default;">Evento presencial</span>
+      </div>
+
+      <div class="pub-item">
+        <div>
+          <p class="pub-year">2018 · Relatório de pesquisa</p>
+          <p class="pub-title">Politização da burocracia no Brasil: análise da trajetória dos membros de carreira meritocrática</p>
+          <p class="pub-authors">Cardoso, L. — Programa Unificado de Bolsas USP. Orientação: Profa. Dra. Cecília Olivieri.</p>
+        </div>
+        <span class="pub-link" style="color: var(--ink-3); cursor: default;">Relatório interno</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── DEPOIMENTOS ── -->
+<section id="depoimentos">
+  <div class="wrap">
+    <p class="section-label">O que dizem</p>
+    <h2 class="section-title">Quem trabalhou comigo</h2>
+    <div class="dep-grid">
+
+      <div class="dep-card">
+        <p class="dep-quote">"Tem uma perspicácia excepcional na área dela, além de ter um entendimento sobre projetos e políticas públicas que contribuía muito para a dinâmica da Reprograma."</p>
+        <p class="dep-author">Raquel Catelan</p>
+        <p class="dep-role">Product Designer Jr / UX-UI Designer — colega na Reprograma</p>
+      </div>
+
+      <div class="dep-card">
+        <p class="dep-quote">"Seu comprometimento e dedicação são consistentes e contagiantes, tendo bastante conhecimento técnico para coordenação e gestão de projetos. De fato, a considero um excelente exemplo de liderança de impacto e inclusiva."</p>
+        <p class="dep-author">Amanda Souza</p>
+        <p class="dep-role">Desenvolvimento Sustentável e Políticas Públicas — gestora direta</p>
+      </div>
+
+      <div class="dep-card">
+        <p class="dep-quote">"Ela sempre trazia soluções inovadoras para os desafios do dia a dia e sempre se mostrou super disposta a colaborar e somar junto, sem medo de tomar a iniciativa quando necessário."</p>
+        <p class="dep-author">Mariana Pereira</p>
+        <p class="dep-role">Filantropia e Investimento Social — gestora direta na Reprograma</p>
+      </div>
+
+      <div class="dep-card">
+        <p class="dep-quote">"Rapidamente se tornou uma pessoa chave dentro da organização ao apoiar a implementação da gestão de programas e na construção da Teoria da Mudança, crucial para a estratégia organizacional."</p>
+        <p class="dep-author">Silvia Rodrigues Follador</p>
+        <p class="dep-role">PhD Candidate FGV EAESP & Research Scholar MIT — gestora direta</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FORMAÇÃO ── -->
+<section id="formacao">
+  <div class="wrap">
+    <p class="section-label">Formação</p>
+    <h2 class="section-title">Trajetória acadêmica</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Mestrado em Gestão de Políticas Públicas</h3>
+          <p>Universidade de São Paulo — EACH-USP · Dissertação: A configuração do mix de instrumentos da mobilidade urbana no PlanClima SP</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Especialização em Inteligência de Mercado</h3>
+          <p>Saint Paul Escola de Negócios</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Laboratório de Pesquisa — 40h</h3>
+          <p>Centro Brasileiro de Análise e Planejamento — CEBRAP</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2022</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Políticas Informadas por Evidências (PIE) — 100h</h3>
+          <p>Instituto Veredas · Revisão sistemática e evidências em políticas públicas</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2019</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>PMD Pro — Project Management for Development</h3>
+          <p>Ink Inspira · Metodologia de gestão de projetos sociais</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2014–2019</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Bacharelado em Gestão de Políticas Públicas</h3>
+          <p>Universidade de São Paulo — EACH-USP</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2012–2013</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Técnico em Gestão Pública</h3>
+          <p>Centro Paula Souza — ETEC CEPAM</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTATO ── -->
+<section id="contato">
+  <div class="wrap">
+    <div class="contato-grid">
+      <div>
+        <p class="section-label">Contato</p>
+        <h2 class="section-title">Vamos conversar</h2>
+        <p class="contato-text" style="margin-bottom: 1rem;">
+          Estou aberta a conversas sobre projetos, consultorias, pesquisas colaborativas ou oportunidades que conectem gestão de programas, avaliação e equidade de gênero e raça.
+        </p>
+        <p class="contato-text">
+          Se algo do que você leu aqui ressoou, me escreve.
+        </p>
+        <div class="contato-links">
+          <a class="contato-link" href="mailto:leticia.leticea@gmail.com">
+            <span class="contato-icon">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M5 6h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg>
+            </span>
+            leticia.leticea@gmail.com
+          </a>
+          <a class="contato-link" href="https://linkedin.com/in/cardosoletícia" target="_blank">
+            <span class="contato-icon">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4M11 10v7"/></svg>
+            </span>
+            linkedin.com/in/cardosoletícia
+          </a>
+          <a class="contato-link" href="cv_leticia_cardoso.pdf" target="_blank">
+            <span class="contato-icon">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>
+            </span>
+            Baixar CV completo
+          </a>
+        </div>
+      </div>
+      <form class="contato-form" onsubmit="handleForm(event)">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="text" placeholder="Assunto" />
+        <textarea rows="4" placeholder="Como posso ajudar?" required></textarea>
+        <button type="submit">Enviar mensagem</button>
+        <p id="form-msg" style="font-size:13px; color: #5DCAA5; display:none;">Mensagem enviada! Em breve entro em contato.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap">
+    © 2025 Letícia Cardoso · São Paulo, SP
+  </div>
+</footer>
+
+<script>
+  function showBlock(id, btn) {
+    document.querySelectorAll('.proj-block').forEach(b => b.classList.remove('visible'));
+    document.querySelectorAll('.proj-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('block-' + id).classList.add('visible');
+    btn.classList.add('active');
+  }
+
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('form-msg').style.display = 'block';
+    e.target.reset();
+    setTimeout(() => { document.getElementById('form-msg').style.display = 'none'; }, 4000);
+  }
+
+  // Fade-in suave nas seções ao rolar
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('section').forEach(s => {
+    s.style.opacity = '0';
+    s.style.transform = 'translateY(20px)';
+    s.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(s);
+  });
+</script>
+
+</body>
+</html>
