@@ -500,6 +500,24 @@
     }
 
     /* ── Responsive ── */
+    /* ── Carrossel ── */
+    .carousel { position: relative; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; height: 200px; }
+    .carousel-track { display: flex; transition: transform .35s ease; height: 100%; }
+    .carousel-track img { min-width: 100%; height: 200px; object-fit: cover; flex-shrink: 0; }
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.85); border: none; border-radius: 50%;
+      width: 32px; height: 32px; cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ink); z-index: 2; transition: background .15s;
+    }
+    .carousel-btn:hover { background: #fff; }
+    .carousel-btn.prev { left: 8px; }
+    .carousel-btn.next { right: 8px; }
+    .carousel-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+    .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; transition: background .15s; }
+    .carousel-dot.active { background: #fff; }
+
     @media (max-width: 700px) {
       .hero-grid, .sobre-grid, .contato-grid, .dep-grid, .proj-grid { grid-template-columns: 1fr; }
       .hero-photo { order: -1; }
@@ -545,12 +563,7 @@
         </div>
       </div>
       <div class="hero-photo">
-        <!-- INSTRUÇÃO: substitua o conteúdo abaixo pela tag <img> quando tiver a foto -->
-        
-        <div class="hero-photo-placeholder">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          foto-hero.jpg
-        </div>
+        <img src="fotos/foto-hero.jpg" alt="Letícia Cardoso" style="width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:3/4;display:block;" />
         <div class="hero-badge">
           <strong>Mestranda USP</strong>
           Gestão de Políticas Públicas · 2025
@@ -586,7 +599,7 @@
       <div class="sobre-photo">
         <!-- INSTRUÇÃO: substitua pela tag <img> quando tiver a foto -->
         
-        <img src="fotos/foto-sobre.jpg" alt="Letícia Cardoso em evento" style="width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:4/5;display:block;" />
+        <img src="fotos/forum-politica.jpg" alt="Letícia Cardoso em evento" style="width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:4/5;display:block;" />
       </div>
     </div>
   </div>
@@ -662,7 +675,20 @@
 
         <div class="proj-card">
           <!-- <img class="proj-img" src="fotos/reprograma-oficina.jpg" alt="Oficina UNESCO EducaSTEM"> -->
-          <img class="proj-img" src="fotos/reprograma-oficina.jpg" alt="Oficina UNESCO Pará" />
+          <div class="carousel" id="car-reprograma">
+            <div class="carousel-track">
+              <img src="fotos/reprograma-1.jpg" alt="Oficina Reprograma Pará" />
+              <img src="fotos/reprograma-2.jpg" alt="Oficina mulheres na tecnologia" />
+              <img src="fotos/reprograma-3.jpg" alt="Mulheres na tecnologia" />
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('car-reprograma',-1)">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel('car-reprograma',1)">›</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+            </div>
+          </div>
           <div class="proj-body">
             <span class="proj-tag">Reprograma · 2022–atual</span>
             <h3>Coordenação de programas de inclusão produtiva em tecnologia</h3>
@@ -673,7 +699,22 @@
 
         <div class="proj-card">
           
-          <img class="proj-img" src="fotos/unesco-beijing.jpg" alt="Simpósio UNESCO Pequim" />
+          <div class="carousel" id="car-unesco">
+            <div class="carousel-track">
+              <img src="fotos/unesco-panel.jpg" alt="Painel UNESCO Pequim Session 4" />
+              <img src="fotos/unesco-beijing.jpg" alt="Simpósio UNESCO Pequim" />
+              <img src="fotos/unesco-primeiradama.jpg" alt="Cerimônia UNESCO com primeira-dama da China" />
+              <img src="fotos/unesco-cerimonia.jpg" alt="Cerimônia Prêmio UNESCO" />
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('car-unesco',-1)">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel('car-unesco',1)">›</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+            </div>
+          </div>
           <div class="proj-body">
             <span class="proj-tag">UNESCO · EducaSTEM2030</span>
             <h3>Programação Desplugada: Belém, Breves e Brasília</h3>
@@ -691,7 +732,18 @@
 
         <div class="proj-card">
           
-          <img class="proj-img" src="fotos/policylab-finep.jpg" alt="PolicytLab FINEP" />
+          <div class="carousel" id="car-policylab">
+            <div class="carousel-track">
+              <img src="fotos/policylab-1.jpg" alt="PolicytLab FINEP" />
+              <img src="fotos/policylab-2.jpg" alt="PolicytLab pesquisa" />
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('car-policylab',-1)">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel('car-policylab',1)">›</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active"></div>
+              <div class="carousel-dot"></div>
+            </div>
+          </div>
           <div class="proj-body">
             <span class="proj-tag">PolicytLab · UNESCO · 2025–2026</span>
             <h3>Avaliação do Programa Mulheres Inovadoras (FINEP/MCTI)</h3>
@@ -994,6 +1046,18 @@
     document.getElementById('form-msg').style.display = 'block';
     e.target.reset();
     setTimeout(() => { document.getElementById('form-msg').style.display = 'none'; }, 4000);
+  }
+
+  function moveCarousel(id, dir) {
+    const car = document.getElementById(id);
+    const track = car.querySelector('.carousel-track');
+    const imgs = track.querySelectorAll('img');
+    const dots = car.querySelectorAll('.carousel-dot');
+    let current = parseInt(track.dataset.current || 0);
+    current = (current + dir + imgs.length) % imgs.length;
+    track.dataset.current = current;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
   }
 
   // Fade-in suave nas seções ao rolar
